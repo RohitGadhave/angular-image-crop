@@ -1,5 +1,5 @@
 # angular-select-image-crop-preview
-Angular Upload Image, Preview &amp; Crop
+Angular Upload Image, Preview &amp; Crop using Angular material
 ### using ngx-image-cropper
 
 Install the dependencies
