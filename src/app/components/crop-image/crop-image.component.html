@@ -1,0 +1,19 @@
+
+
+<input type="file" (change)="fileChangeEvent($event)" />
+<div class="example-button-row">
+    <button mat-raised-button color="primary" >Upload</button>
+</div>
+<div class="example-button-row">
+    <button mat-raised-button color="accent" (click)="imageChangedEvent=croppedImage=''">Cancel </button>
+</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
+            format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
+            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()">
+        </image-cropper>
+    </mat-grid-tile>
+    <mat-grid-tile><img [src]="croppedImage" /></mat-grid-tile>
+
+</mat-grid-list>
